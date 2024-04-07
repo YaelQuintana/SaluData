@@ -52,7 +52,7 @@
                     app:layout_constraintTop_toBottomOf="@+id/imageView2" />
 
                 <Button
-                    android:id="@+id/button2"
+                    android:id="@+id/button_editarPerfil"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="24dp"
@@ -76,21 +76,21 @@
                     android:padding="8dp"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/button2">
+                    app:layout_constraintTop_toBottomOf="@+id/button_editarPerfil">
 
                     <Button
-                        android:id="@+id/button3"
+                        android:id="@+id/button_editarNotificaciones"
                         android:layout_width="match_parent"
 
                         android:layout_height="wrap_content"
-                        android:text="Button"
+                        android:text="Notificaciones"
                         app:cornerRadius="@null" />
 
                     <Button
-                        android:id="@+id/button4"
+                        android:id="@+id/button_editarObjetivos"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Button" />
+                        android:text="Objetivos" />
                 </LinearLayout>
 
                 <LinearLayout
@@ -108,19 +108,19 @@
                     app:layout_constraintTop_toBottomOf="@+id/linearLayout">
 
                     <Button
-                        android:id="@+id/button5"
+                        android:id="@+id/button_Bienvenidos"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="Bienvenidos" />
 
                     <Button
-                        android:id="@+id/button6"
+                        android:id="@+id/button_Nosostros"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="Sobre nosotros" />
 
                     <Button
-                        android:id="@+id/button7"
+                        android:id="@+id/button_Servicios"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="Nuestros servicios" />
@@ -141,7 +141,7 @@
                     app:layout_constraintTop_toBottomOf="@+id/linearLayout2">
 
                     <Button
-                        android:id="@+id/button8"
+                        android:id="@+id/button_cerrarSesion"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="Cerrar sesión" />
