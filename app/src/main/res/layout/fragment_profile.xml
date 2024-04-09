@@ -30,7 +30,7 @@
                     android:layout_marginEnd="24dp"
                     android:background="@drawable/circle_fig"
                     android:clipToOutline="true"
-                    android:src="@drawable/no_mokin"
+                    android:src="@drawable/user"
                     android:maxWidth="142dp"
                     android:maxHeight="142dp"
                     android:scaleType="fitCenter"
