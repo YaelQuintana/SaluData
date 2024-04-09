@@ -7,10 +7,11 @@ import android.database.sqlite.SQLiteOpenHelper
 
 class miSQLiteHelper(context: Context) : SQLiteOpenHelper(
     context, "users.db", null, 1) {
+
     override fun onCreate(db: SQLiteDatabase?) {
         val ordenCreacion = "CREATE TABLE users " +
                 "(_id INTEGER PRIMARY KEY AUTOINCREMENT,"+
-                        "nombre TEXT, email TEXT, password TEXT)"
+                        "username TEXT, password TEXT)"
         db!!.execSQL(ordenCreacion)
     }
 
@@ -21,15 +22,26 @@ class miSQLiteHelper(context: Context) : SQLiteOpenHelper(
         onCreate(db)
     }
 
-    fun addValue(nombre: String, email: String, password: String){
+    fun addValue(username: String, password: String){
         val values = ContentValues()
-        values.put("nombre", nombre)
-        values.put("email", email)
+        values.put("username", username)
         values.put("password", password)
 
         val db = this.writableDatabase
         db.insert("users", null, values)
         db.close()
+    }
+
+    fun checkUser(username: String, password: String): Boolean{
+        val db = this.writableDatabase
+        val query = "SELECT * FROM users WHERE username = '$username' and password = '$password'"
+        val cursor = db.rawQuery(query, null)
+        if (cursor.count <= 0){
+            cursor.close()
+            return false
+        }
+        cursor.close()
+        return true
     }
 
 }
