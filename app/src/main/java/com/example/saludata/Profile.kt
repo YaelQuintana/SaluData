@@ -5,6 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
 import android.widget.ImageView
 
 // TODO: Rename parameter arguments, choose names that match
@@ -15,6 +16,9 @@ import android.widget.ImageView
 class Profile : Fragment() {
     // TODO: Rename and change types of parameters
     private lateinit var imageView2: ImageView
+
+    //bottom sheet
+    private lateinit var button_Bienvenidos: Button
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -33,6 +37,10 @@ class Profile : Fragment() {
        // return inflater.inflate(R.layout.fragment_profile, container, false)
 
         return view
+    }
+
+    override fun showBottomSheet() {
+
     }
 
 
