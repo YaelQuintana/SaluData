@@ -16,7 +16,7 @@ class Login2Fragment : Fragment() {
     private lateinit var loginButton: Button
     private lateinit var username: EditText
     private lateinit var password: EditText
-    private lateinit var dbh: miSQLiteHelper
+    //private lateinit var dbh: miSQLiteHelper
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -34,10 +34,10 @@ class Login2Fragment : Fragment() {
         loginButton = view.findViewById(R.id.buttonLogin)
         username = view.findViewById(R.id.editTextUsername)
         password = view.findViewById(R.id.editTextPassword)
-        dbh = miSQLiteHelper(requireContext())
+        //dbh = miSQLiteHelper(requireContext())
 
         // Set click listener for loginButton
-        loginButton.setOnClickListener {
+        /*loginButton.setOnClickListener {
             // Handle button click event here
             val userText = username.text.toString()
             val passText = password.text.toString()
@@ -48,7 +48,7 @@ class Login2Fragment : Fragment() {
             else if (userText = "realname"){
 
             }
-        }
+        }*/
 
         return view
     }

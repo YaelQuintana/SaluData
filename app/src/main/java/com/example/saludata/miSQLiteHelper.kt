@@ -5,15 +5,15 @@ import android.content.Context
 import android.database.sqlite.SQLiteDatabase
 import android.database.sqlite.SQLiteOpenHelper
 
-class miSQLiteHelper(context: Context) : SQLiteOpenHelper(
+/*class miSQLiteHelper(context: Context) : SQLiteOpenHelper(
     context, "users.db", null, 1) {
 
-    override fun onCreate(db: SQLiteDatabase?) {
+    /*override fun onCreate(db: SQLiteDatabase?) {
         val ordenCreacion = "CREATE TABLE users " +
                 "(_id INTEGER PRIMARY KEY AUTOINCREMENT,"+
                         "username TEXT, password TEXT)"
         db!!.execSQL(ordenCreacion)
-    }
+    }*/
 
     override fun onUpgrade(db: SQLiteDatabase?, oldVersion: Int, newVersion: Int) {
         //solo para pruebas
@@ -44,4 +44,4 @@ class miSQLiteHelper(context: Context) : SQLiteOpenHelper(
         return true
     }
 
-}
+}*/
