@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/textView6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="66dp"
+                    android:layout_marginTop="47dp"
+                    android:layout_marginEnd="64dp"
+                    android:text="Nuestros servicios"
+                    android:textSize="34sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/textView7"
+                    android:layout_width="326dp"
+                    android:layout_height="226dp"
+                    android:layout_marginStart="42dp"
+                    android:layout_marginTop="32dp"
+                    android:layout_marginEnd="42dp"
+                    android:lineSpacingExtra="8sp"
+                    android:text="Nuestro equipo de desarrollo personalizado está comprometido  a ofrecerte soluciones innovadoras y adaptadas a tus necesidades específicas. Con un enfoque centrado en el usuario y una pasión por la excelencia técnica, estamos aquí para ayudarte a llevar tu visión al siguiente nivel y alcanzar el éxito en el mundo digital."
+                    android:textSize="16sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textView6" />
+
+                <TextView
+                    android:id="@+id/textView8"
+                    android:layout_width="320dp"
+                    android:layout_height="447dp"
+                    android:layout_marginStart="47dp"
+                    android:layout_marginTop="24dp"
+                    android:layout_marginEnd="47dp"
+                    android:layout_marginBottom="16dp"
+
+                    android:lineSpacingExtra="8sp"
+                    android:text="
+
+1. Desarrollo de Aplicaciones Móviles: Nuestro equipo de desarrolladores de aplicaciones móviles
+está capacitado para crear experiencias móviles excepcionales en todas las plataformas principales,
+desde iOS y Android hasta aplicaciones híbridas. \n
+2. Diseño de Interfaz de Usuario (UI/UX): Nuestros diseñadores de interfaz de usuario (UI) y
+experiencia de usuario (UX) están dedicados a crear experiencias digitales atractivas e intuitivas
+que deleiten a los usuarios y fomenten la participación \n
+3. Desarrollo Web y Backend: Nuestro equipo de desarrollo web y backend tiene la experiencia y
+la experiencia técnica necesarias para crear soluciones web robustas y escalables que cumplan con
+tus requisitos específicos."
+                    android:textSize="16sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textView7" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

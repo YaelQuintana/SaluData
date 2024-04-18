@@ -24,10 +24,10 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="46dp"
-                    android:layout_marginTop="32dp"
+                    android:layout_marginTop="47dp"
                     android:layout_marginEnd="46dp"
                     android:gravity="center"
-                    android:text="Title"
+                    android:text="Bienvenidos"
                     android:textSize="34sp"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
@@ -41,15 +41,11 @@
                     android:layout_marginTop="32dp"
                     android:layout_marginEnd="40dp"
                     android:lineSpacingExtra="8sp"
-                    android:text="Lorem ipsum dolor sit amet, consectetur
-                    adipiscing elit, sed do eiusmod tempor incididunt ut
-                    labore et dolore magna aliqua. Ut enim ad minim veniam,
-                    quis nostrud exercitation ullamco laboris nisi ut aliquip
-                    ex ea commodo consequat. Duis aute irure dolor in
-                    reprehenderit in voluptate velit esse cillum dolore eu
-                    fugiat nulla pariatur. Excepteur sint occaecat cupidatat
-                    non proident, sunt in culpa qui officia deserunt mollit
-                    anim id est laborum."
+                    android:text="Bienvenido a SaluData, la aplicación que tiene el propósito
+de mantener un seguimiento de hábitos saludables con una mascota virtual que servirá como
+principal motivación. Con SaluData, no solo estarás mejorando tu salud, ¡también estarás cuidando
+y fortaleciendo a tu fiel compañero virtual mientras avanzas en tu viaje hacia un estilo de vida
+más saludable y feliz."
                     android:textAllCaps="false"
                     android:textSize="16sp"
                     app:layout_constraintEnd_toEndOf="parent"
