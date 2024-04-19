@@ -9,6 +9,8 @@ import android.view.ViewGroup
 import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
+import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.auth.FirebaseAuth.AuthStateListener
 
 
 class Login2Fragment : Fragment() {
@@ -16,6 +18,8 @@ class Login2Fragment : Fragment() {
     private lateinit var loginButton: Button
     private lateinit var username: EditText
     private lateinit var password: EditText
+    private lateinit var firebaseAuth: FirebaseAuth
+    private lateinit var authStateListener: AuthStateListener
     //private lateinit var dbh: miSQLiteHelper
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -37,7 +41,7 @@ class Login2Fragment : Fragment() {
         //dbh = miSQLiteHelper(requireContext())
 
         // Set click listener for loginButton
-        /*loginButton.setOnClickListener {
+        loginButton.setOnClickListener {
             // Handle button click event here
             val userText = username.text.toString()
             val passText = password.text.toString()
@@ -48,9 +52,19 @@ class Login2Fragment : Fragment() {
             else if (userText = "realname"){
 
             }
-        }*/
+        }
 
         return view
+    }
+
+    private fun signIn(email: String, password: String){
+        firebaseAuth.signInWithEmailAndPassword(email, password)
+            .addOnCompleteListener(this){ task ->
+                if(task.isSuccessful){
+                    val user = firebaseAuth.currentUser
+                    Toast.makeText(baseContext, user?.uid.toString(), Toast.LENGTH_SHORT).show()
+                }
+        }
     }
 
     /*override fun onCreateView(
