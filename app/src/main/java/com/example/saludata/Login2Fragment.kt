@@ -11,6 +11,7 @@ import android.widget.EditText
 import android.widget.Toast
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseAuth.AuthStateListener
+import com.google.firebase.auth.auth
 
 
 class Login2Fragment : Fragment() {
@@ -19,12 +20,12 @@ class Login2Fragment : Fragment() {
     private lateinit var username: EditText
     private lateinit var password: EditText
     private lateinit var firebaseAuth: FirebaseAuth
-    private lateinit var authStateListener: AuthStateListener
+    private lateinit var authStateListener: FirebaseAuth.AuthStateListener
     //private lateinit var dbh: miSQLiteHelper
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-
+        firebaseAuth = FirebaseAuth.getInstance()
 
     }
 
@@ -39,6 +40,7 @@ class Login2Fragment : Fragment() {
         username = view.findViewById(R.id.editTextUsername)
         password = view.findViewById(R.id.editTextPassword)
         //dbh = miSQLiteHelper(requireContext())
+        //firebaseAuth =
 
         // Set click listener for loginButton
         loginButton.setOnClickListener {
@@ -46,12 +48,16 @@ class Login2Fragment : Fragment() {
             val userText = username.text.toString()
             val passText = password.text.toString()
 
-            if (TextUtils.isEmpty(userText) || TextUtils.isEmpty(passText)){
+            Toast.makeText(requireContext(), "teeesssttt", Toast.LENGTH_SHORT).show()
+
+            //signIn(userText, passText)
+
+            /*if (TextUtils.isEmpty(userText) || TextUtils.isEmpty(passText)){
                 Toast.makeText(this, "Add Username & Password", Toast.LENGTH_SHORT).show()
             }
             else if (userText = "realname"){
 
-            }
+            }*/
         }
 
         return view
@@ -59,10 +65,17 @@ class Login2Fragment : Fragment() {
 
     private fun signIn(email: String, password: String){
         firebaseAuth.signInWithEmailAndPassword(email, password)
-            .addOnCompleteListener(this){ task ->
+            .addOnCompleteListener(requireActivity()){ task ->
                 if(task.isSuccessful){
                     val user = firebaseAuth.currentUser
-                    Toast.makeText(baseContext, user?.uid.toString(), Toast.LENGTH_SHORT).show()
+                    Toast.makeText(requireContext(), user?.uid.toString(), Toast.LENGTH_SHORT).show()
+                    //ir a main
+                } else {
+                    //Login failed
+                    Toast.makeText(
+                        requireContext(), "Authentication failed.",
+                        Toast.LENGTH_SHORT
+                    ).show()
                 }
         }
     }
@@ -95,3 +108,7 @@ class Login2Fragment : Fragment() {
             }
     }*/
 }
+
+/*private fun Any.addOnCompleteListener(login2Fragment: Login2Fragment, any: Any) {
+    TODO("Not yet implemented")
+}*/
