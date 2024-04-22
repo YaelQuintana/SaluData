@@ -39,9 +39,9 @@ class Profile : Fragment() {
         return view
     }
 
-    override fun showBottomSheet() {
+    /*override fun showBottomSheet() {
 
-    }
+    }*/
 
 
 }
