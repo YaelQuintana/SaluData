@@ -54,6 +54,7 @@
                 android:layout_marginStart="329dp"
                 android:layout_marginTop="18dp"
                 android:layout_marginEnd="28dp"
+                android:background="@android:color/transparent"
                 android:src="@drawable/notification_bell_svgrepo_com"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
