@@ -15,7 +15,7 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
-        setContentView(R.layout.fragment_login) //R.layout.activity_main  binding.root
+        setContentView(R.layout.fragment_login2) //R.layout.activity_main  binding.root
         //replaceFragment(Home())
 
         binding.buttonNavigationView.setOnItemSelectedListener {

@@ -36,32 +36,41 @@ class Login2Fragment : Fragment() {
         // Inflate the layout for this fragment
         val view = inflater.inflate(R.layout.fragment_login2, container, false)
 
-        loginButton = view.findViewById(R.id.buttonLogin)
+        loginButton = view.findViewById(R.id.button2)
         username = view.findViewById(R.id.editTextUsername)
         password = view.findViewById(R.id.editTextPassword)
         //dbh = miSQLiteHelper(requireContext())
         //firebaseAuth =
 
         // Set click listener for loginButton
+
+
+        return view
+    }
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
+        // Handle login button click
         loginButton.setOnClickListener {
             // Handle button click event here
             val userText = username.text.toString()
             val passText = password.text.toString()
 
-            Toast.makeText(requireContext(), "teeesssttt", Toast.LENGTH_SHORT).show()
+            Toast.makeText(this, "teeesssttt", Toast.LENGTH_SHORT).show()
 
             //signIn(userText, passText)
 
             /*if (TextUtils.isEmpty(userText) || TextUtils.isEmpty(passText)){
-                Toast.makeText(this, "Add Username & Password", Toast.LENGTH_SHORT).show()
+                Toast.makeText(requireContext(), "Add Username & Password", Toast.LENGTH_SHORT).show()
             }
-            else if (userText = "realname"){
+            else {
+                Toast.makeText(requireContext(), "ja", Toast.LENGTH_SHORT).show()
 
             }*/
         }
-
-        return view
     }
+
+    
 
     private fun signIn(email: String, password: String){
         firebaseAuth.signInWithEmailAndPassword(email, password)
