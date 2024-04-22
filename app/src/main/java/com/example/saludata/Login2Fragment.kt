@@ -56,7 +56,7 @@ class Login2Fragment : Fragment() {
             val userText = username.text.toString()
             val passText = password.text.toString()
 
-            Toast.makeText(this, "teeesssttt", Toast.LENGTH_SHORT).show()
+            //Toast.makeText(this, "teeesssttt", Toast.LENGTH_SHORT).show()
 
             //signIn(userText, passText)
 
