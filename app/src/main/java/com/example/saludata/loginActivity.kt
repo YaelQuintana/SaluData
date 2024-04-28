@@ -58,6 +58,7 @@ class loginActivity : AppCompatActivity() {
                     //ir a main
                     val i = Intent(this, MainActivity::class.java)
                     startActivity(i)
+                    finish()
                 } else {
                     //Login failed
                     Toast.makeText(
