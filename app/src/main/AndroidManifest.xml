@@ -13,6 +13,9 @@
         android:theme="@style/Theme.SaluData"
         tools:targetApi="31">
         <activity
+            android:name=".registerActivity"
+            android:exported="false" />
+        <activity
             android:name=".ChronometerActivity"
             android:exported="false" />
         <activity
@@ -28,7 +31,7 @@
         <activity
             android:name=".MainActivity"
             android:exported="true"
-            android:screenOrientation="portrait"></activity>
+            android:screenOrientation="portrait" />
     </application>
 
 </manifest>

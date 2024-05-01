@@ -5,16 +5,14 @@ import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
-import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
 import com.google.firebase.Firebase
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.auth
 
 class loginActivity : AppCompatActivity() {
     private lateinit var loginButton: Button
+    private lateinit var registrarseButton: Button
     private lateinit var username: EditText
     private lateinit var password: EditText
     private lateinit var firebaseAuth: FirebaseAuth
@@ -24,6 +22,7 @@ class loginActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login)
         loginButton = findViewById(R.id.button2)
+        registrarseButton = findViewById(R.id.button3)
         username = findViewById(R.id.editTextUsername)
         password = findViewById(R.id.editTextPassword)
 
@@ -46,6 +45,12 @@ class loginActivity : AppCompatActivity() {
 
             }*/
 
+        }
+
+        registrarseButton.setOnClickListener {
+            val i = Intent(this, registerActivity::class.java)
+            startActivity(i)
+            // finish()
         }
     }
 
