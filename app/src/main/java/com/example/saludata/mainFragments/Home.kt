@@ -1,13 +1,14 @@
-package com.example.saludata
+package com.example.saludata.mainFragments
 
 import android.content.Intent
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Button
 import android.widget.ImageButton
+import androidx.fragment.app.Fragment
+import com.example.saludata.ChronometerActivity
+import com.example.saludata.R
 
 class Home : Fragment() {
 

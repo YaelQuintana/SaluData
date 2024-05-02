@@ -5,6 +5,9 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import com.example.saludata.databinding.ActivityMainBinding
+import com.example.saludata.mainFragments.Calendar
+import com.example.saludata.mainFragments.Home
+import com.example.saludata.mainFragments.Profile
 
 class MainActivity : AppCompatActivity() {
 

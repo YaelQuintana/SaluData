@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#edf1f3"
-    tools:context=".Home">
+    tools:context=".mainFragments.Home">
 
     <ScrollView
         android:layout_width="match_parent"
