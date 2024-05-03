@@ -47,23 +47,7 @@ class registerActivity : AppCompatActivity() {
             val username = usernameEditText.text.toString()
             val confirmPassword = confirmPasswordEditText.text.toString()
 
-            /*if (email.isEmpty() || password.isEmpty() || username.isEmpty()) {
-                // Muestra un mensaje de error si los campos están vacíos
-                Toast.makeText(this, "Por favor, completa todos los campos", Toast.LENGTH_SHORT)
-                    .show()
 
-                if (password != confirmPassword) {
-                    Toast.makeText(this, "La contraseña no es la misma", Toast.LENGTH_SHORT).show()
-
-                }
-                //return@setOnClickListener
-            }else if (password != confirmPassword) {
-            Toast.makeText(this, "La contraseña no es la misma", Toast.LENGTH_SHORT).show()
-
-        }
-            else{
-                signUp(email, password, username)
-            }*/
             val validationResult = when {
                 email.isEmpty() || password.isEmpty() || username.isEmpty() -> {
                     "Please fill out all fields" // Return a string indicating empty fields

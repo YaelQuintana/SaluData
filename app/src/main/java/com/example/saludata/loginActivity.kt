@@ -33,17 +33,8 @@ class loginActivity : AppCompatActivity() {
             val userText = username.text.toString()
             val passText = password.text.toString()
 
-            //Toast.makeText(this, "teeesssttt", Toast.LENGTH_SHORT).show()
 
             signIn(userText, passText)
-
-            /*if (TextUtils.isEmpty(userText) || TextUtils.isEmpty(passText)){
-                Toast.makeText(requireContext(), "Add Username & Password", Toast.LENGTH_SHORT).show()
-            }
-            else {
-                Toast.makeText(requireContext(), "ja", Toast.LENGTH_SHORT).show()
-
-            }*/
 
         }
 
