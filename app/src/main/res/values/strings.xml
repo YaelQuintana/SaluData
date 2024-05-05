@@ -11,4 +11,16 @@
     <string name="invalid_username">Not a valid username</string>
     <string name="invalid_password">Password must be >5 characters</string>
     <string name="login_failed">"Login failed"</string>
+
+    <!-- Dropdown strings -->
+    <string-array name = "Habito_dropdown">
+        <item>Estudiar</item>
+        <item>Ejercicio</item>
+    </string-array>
+    <string-array name = "Tiempo_dropdown">
+        <item>10 seg (test)</item>
+        <item>5 min</item>
+        <item>10 min</item>
+        <item>20 min </item>
+    </string-array>
 </resources>
