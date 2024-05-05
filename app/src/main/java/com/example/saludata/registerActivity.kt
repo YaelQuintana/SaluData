@@ -17,7 +17,7 @@ import com.google.firebase.firestore.firestore
 
 class registerActivity : AppCompatActivity() {
     private lateinit var auth: FirebaseAuth
-    // private lateinit var db: FirebaseFirestore
+    private lateinit var db: FirebaseFirestore
     private lateinit var emailEditText: EditText
     private lateinit var passwordEditText: EditText
     private lateinit var usernameEditText: EditText
@@ -31,7 +31,7 @@ class registerActivity : AppCompatActivity() {
 
         // Inicializa Firebase Auth y Firestore
         auth = FirebaseAuth.getInstance()
-        val db = Firebase.firestore //FirebaseFirestore.getInstance()
+        db =  FirebaseFirestore.getInstance() /*Firebase.firestore*/
 
         // Obtiene referencias a los campos de entrada de la interfaz de usuario
         emailEditText = findViewById(R.id.emailEditText)
@@ -73,7 +73,7 @@ class registerActivity : AppCompatActivity() {
         // Registra al usuario en Firebase Authentication
 
     private fun signUp(email: String, password: String, username: String) {
-        val db = Firebase.firestore
+        //val db = Firebase.firestore
 
         auth.createUserWithEmailAndPassword(email, password)
             .addOnCompleteListener(this) { task ->

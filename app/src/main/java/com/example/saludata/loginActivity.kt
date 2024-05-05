@@ -33,9 +33,7 @@ class loginActivity : AppCompatActivity() {
             val userText = username.text.toString()
             val passText = password.text.toString()
 
-
             signIn(userText, passText)
-
         }
 
         registrarseButton.setOnClickListener {
