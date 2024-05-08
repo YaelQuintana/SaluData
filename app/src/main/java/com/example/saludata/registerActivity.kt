@@ -93,7 +93,7 @@ class registerActivity : AppCompatActivity() {
                                     "RegistroActivity",
                                     "Usuario registrado y guardado en Firestore"
                                 )
-                                startActivity(Intent(this, MainActivity::class.java))
+                                startActivity(Intent(this, PreferencesActivity::class.java))
                                 finish()
                             } else {
                                 // Error al guardar al usuario en Firestore
