@@ -6,10 +6,7 @@ import android.util.Log
 import android.widget.Button
 import android.widget.Spinner
 import android.widget.Toast
-import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FirebaseFirestore
 
@@ -45,7 +42,7 @@ class PreferencesActivity : AppCompatActivity() {
 
     }
 
-    private fun parseTimeSelection(timeString: String): Int {
+    private fun parseTimeSelection(timeString: String): Long {
         val timeParts = timeString.split(" ")
         val timeValue = timeParts[0].toInt()
         val unit = timeParts[1]
@@ -56,10 +53,10 @@ class PreferencesActivity : AppCompatActivity() {
             "sec" -> multiplier = 1000
         }
 
-        return timeValue * multiplier
+        return (timeValue * multiplier).toLong()
     }
 
-    private fun saveSettings(habito: String, duration: Int){
+    private fun saveSettings(habito: String, duration: Long){
         val userID = auth.currentUser!!.uid
         val settings = hashMapOf(
             "habito" to habito,

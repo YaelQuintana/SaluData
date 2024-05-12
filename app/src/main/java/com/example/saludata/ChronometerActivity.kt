@@ -23,6 +23,7 @@ class ChronometerActivity : AppCompatActivity() {
     private lateinit var controlButton: FloatingActionButton
     private var isRunning: Boolean = false
     private lateinit var chronometerData: ChronometerData
+    private var pauseOffset: Long = 0
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -37,11 +38,23 @@ class ChronometerActivity : AppCompatActivity() {
         auth = FirebaseAuth.getInstance()
 
 
-
         fetchUserData()
 
-        // Click listener
         controlButton.setOnClickListener {
+            if (isRunning) {
+                chronometer.stop()
+                pauseOffset = SystemClock.elapsedRealtime() - chronometer.base
+                isRunning = false
+                //chronometer.base = SystemClock.elapsedRealtime()
+            } else {
+                chronometer.base = SystemClock.elapsedRealtime() - pauseOffset
+                chronometer.start()
+                isRunning = true
+            }
+        }
+
+        // Click listener
+        /*controlButton.setOnClickListener {
             if (::chronometerData.isInitialized && chronometerData.duration > 0){
             //chronometer.start()
             startChronometer(chronometerData.duration)
@@ -56,7 +69,7 @@ class ChronometerActivity : AppCompatActivity() {
                 Log.w("ChronometerActivity", "Chronometer data not available")
                 Toast.makeText(this, "Data not available", Toast.LENGTH_SHORT).show()
             }
-        }
+        }*/
 
 
 
@@ -65,13 +78,15 @@ class ChronometerActivity : AppCompatActivity() {
     private fun fetchUserData() {
         val userId = auth.currentUser!!.uid
         val docRef = db.collection("habitos").document(userId)
+        val chronometerData: Long
 
         docRef.get()
             .addOnSuccessListener { document ->
                 if (document.exists()) {
                     val duration = document.getLong("duration")!!
-                    //startChronometer(duration)
-                    chronometerData.duration = duration
+                    startChronometer(duration)
+                    //chronometerData.duration = duration
+
                 } else {
                     Log.w("Chronometer activity", "User data not found")
                 }
@@ -84,7 +99,7 @@ class ChronometerActivity : AppCompatActivity() {
     private fun startChronometer(duration: Long) {
         chronometer.base = SystemClock.elapsedRealtime()
         chronometer.start()
-        //isRunning = true
+        isRunning = true
 
         chronometer.setOnChronometerTickListener {
             val elapsedTime = SystemClock.elapsedRealtime() - chronometer.base
@@ -97,7 +112,6 @@ class ChronometerActivity : AppCompatActivity() {
 
 
     data class ChronometerData (var duration: Long = 0)
-
     override fun onResume() {
         super.onResume()
         if (isRunning) {
