@@ -3,6 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    android:background="@drawable/dialog_bg"
     android:layout_height="match_parent">
 
     <TextView
@@ -13,6 +14,7 @@
         android:layout_marginTop="47dp"
         android:layout_marginEnd="124dp"
         android:text="Sobre nosotros"
+        android:textColor="#000000"
         android:textSize="34sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -31,6 +33,7 @@ personas mediante una aplicación móvil innovadora y fácil de usar. Comprometi
 misión de ayudar a las personas a alcanzar sus objetivos de vida saludable.  Nos esforzamos
 por ofrecer una experiencia de usuario excepcional, combinando diseño intuitivo,
 funcionalidades robustas y contenido inspirador para motivar a nuestros usuarios a alcanzar sus metas de salud."
+        android:textColor="#000000"
         android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

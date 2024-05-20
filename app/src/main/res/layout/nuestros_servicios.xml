@@ -3,6 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    android:background="@drawable/dialog_bg"
     android:layout_height="match_parent">
 
     <ScrollView
@@ -26,6 +27,7 @@
                     android:layout_marginTop="47dp"
                     android:layout_marginEnd="64dp"
                     android:text="Nuestros servicios"
+                    android:textColor="#000000"
                     android:textSize="34sp"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
@@ -40,6 +42,7 @@
                     android:layout_marginEnd="42dp"
                     android:lineSpacingExtra="8sp"
                     android:text="Nuestro equipo de desarrollo personalizado está comprometido  a ofrecerte soluciones innovadoras y adaptadas a tus necesidades específicas. Con un enfoque centrado en el usuario y una pasión por la excelencia técnica, estamos aquí para ayudarte a llevar tu visión al siguiente nivel y alcanzar el éxito en el mundo digital."
+                    android:textColor="#000000"
                     android:textSize="16sp"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
@@ -66,6 +69,7 @@ que deleiten a los usuarios y fomenten la participación \n
 3. Desarrollo Web y Backend: Nuestro equipo de desarrollo web y backend tiene la experiencia y
 la experiencia técnica necesarias para crear soluciones web robustas y escalables que cumplan con
 tus requisitos específicos."
+                    android:textColor="#000000"
                     android:textSize="16sp"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"

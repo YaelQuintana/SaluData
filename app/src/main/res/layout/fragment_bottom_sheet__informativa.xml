@@ -3,6 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    android:background="@drawable/dialog_bg"
     android:layout_height="match_parent"
     tools:context=".bottomSheet_Informativa">
 
@@ -28,6 +29,7 @@
                     android:layout_marginEnd="46dp"
                     android:gravity="center"
                     android:text="Bienvenidos"
+                    android:textColor="#000000"
                     android:textSize="34sp"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
@@ -47,6 +49,7 @@ principal motivación. Con SaluData, no solo estarás mejorando tu salud, ¡tamb
 y fortaleciendo a tu fiel compañero virtual mientras avanzas en tu viaje hacia un estilo de vida
 más saludable y feliz."
                     android:textAllCaps="false"
+                    android:textColor="#000000"
                     android:textSize="16sp"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"

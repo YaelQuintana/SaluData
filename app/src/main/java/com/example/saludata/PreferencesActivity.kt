@@ -50,7 +50,7 @@ class PreferencesActivity : AppCompatActivity() {
 
         when (unit) {
             "min" -> multiplier = 60 * 1000
-            "sec" -> multiplier = 1000
+            "seg" -> multiplier = 1000
         }
 
         return (timeValue * multiplier).toLong()

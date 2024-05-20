@@ -78,7 +78,7 @@ class ChronometerActivity : AppCompatActivity() {
     private fun fetchUserData() {
         val userId = auth.currentUser!!.uid
         val docRef = db.collection("habitos").document(userId)
-        val chronometerData: Long
+        //val chronometerData: Long
 
         docRef.get()
             .addOnSuccessListener { document ->
